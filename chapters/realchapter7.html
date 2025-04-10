@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Motion explanation</title>
+        <link rel="stylesheet" href="realchapter7.css" type="text/css">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="realchapter7.js" defer></script>
+    </head>
+    <body>
+        <div class="navbar">
+            <div class="logo">🚀 Science Portal</div>
+            <div class="links">
+                <a href="../index.html">Home</a>
+                <a href="../chapters.html">Chapters</a>
+            </div>
+        </div>
+        <div class="heading-section">
+            <div class="heading-icon">🌀</div>
+            <h1 class="main-heading">Motion</h1>
+            <p class="sub-heading">Understanding the world through movement</p>
+        </div>
+        <div class="content-section">
+            <div class="content-wrapper">
+                <h2>Introduction</h2>
+                <p>
+                    <!-- You can write your explanation here -->
+                    This chapter is the most fundamental in all of physics. Furthermore, I believe that this chapter is also the most visible chapter in our day to day life. 
+                    I mean, who hasn't seen a car moving and a bucket at rest?
+                </p>
+        
+                <p>
+                    Since this is the very first chapter of class 9 physics(which is anyway considered to be a big leap), we attempt to explain concepts in a different manner than the conventional way. Some concepts might be unprecedented for the students, but if learnt carefully, they can be confident of solving any question or numerical arising from this chapter. We keep some preliminaries as follows(dont worry if you dont have any idea about them, we try to cover those as well in this page. Although, these help to grasp concepts better).
+                </p>
+                <h2>Preliminaries</h2>
+                <ul class="styled-list">
+                    <li>Basic graphs (about two-dimensional coordinates)</li>
+                    <li>Slope and inclination</li>
+                    <li>Basic motion theory (as in Class 6)</li>
+                </ul>
+                <p>
+                    In this explanation, we will cover the first two prerequisites, but not the third one since it has already been covered in class 6(for a revision you can quickly skim through the class 6 motion chapter from ncert book class 6 science).
+                </p>
+                <h2>
+                    Basic graphs
+                </h2>
+                <p>
+                    Till now, we have considered physics to be an independent subject, with laws and rules that are used to solve problems and relate to the real world in some form or the other. However now, we realize that physics is not independent, but <em>"INTERDEPENDENT"</em> on other realms of study. In particular, mathematics, which is universally recognized as the language of the universe, is the primary tool of all the physicists and physics students across the world, since it helps us to solve problems which require mathematical insight(for instance, this chapter). 
+                </p>
+                <p>
+                    One of the core things we have been doing till now in mathematics is <em>"statistics"</em>. This is a widely useful topic, however considered to be immensely boring by the students of middle school since they do not see a direct use of this. In this sub-topic, we attempt to use our previous knowledge of statistics and data handling to learn about an immensely powerful tool - coordinate geometry. Do not be afraid, this is not something related to rocket science, in fact we have already done this before. You don't believe me, well then watch:
+                </p>
+                <p>
+                    The table below shows how runs scored in multiple matches are grouped into class intervals. This data can be easily plotted as a histogram.
+                </p>
+                <div class="table-container">
+                    <table class="styled-table">
+                        <thead>
+                            <tr>
+                                <th>Runs (Class Interval)</th>
+                                <th>Frequency (Number of Matches)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>0 – 10</td><td>4</td></tr>
+                            <tr><td>11 – 20</td><td>6</td></tr>
+                            <tr><td>21 – 30</td><td>8</td></tr>
+                            <tr><td>31 – 40</td><td>5</td></tr>
+                            <tr><td>41 – 50</td><td>7</td></tr>
+                            <tr><td>51 – 60</td><td>3</td></tr>
+                            <tr><td>61 – 70</td><td>2</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <canvas id="runsHistogram" width="800" height="400"></canvas>
+                <p>
+                    Now let me tell you that this is a direct application of coordiante geometry, and you have always been using it without knowing! Well this is unfair, so let me make it fair and teach you about this tool.
+                </p>
+                <p>
+                    Coordinate geometry is nothing but the graphical representation of math. It involves plotting data so that it can studied and analyzed easily. It basically consists of two axes - X and Y, where X extends to the right direction and Y extends to the upward direction. The begin from a point which we call the origin, which is basically a point from which distances are measured(all this will make sense in a minute, hang on). Below is how this looks like.
+                </p>
+                <canvas id="coordinatePlane" width="500" height="500" style="border:1px solid #ccc; margin-top: 40px;"></canvas>
+                <p>
+                    As you can see in the above picture, there are two lines, one is horizontal and another is vertical. As mentioned earlier, X axis is the horizontal axis and Y axis is the vertical axis. There is a point marked O, which is known as the <em>"origin"</em>. It is the point of intersection of the axes(plural of axis), and is the point from which we measure distances on this plane. 
+                </p>
+                <p>
+                    By distances, what I mean is that we can measure the seperation between two things using this. As you can see in the above picture, we have points marked at unit distances from each other. As in the x axis, we have on the right side the point 1 marked 1 unit to the right of the origin, and 2 marked 2 unit to the right of origin and 1 unit to the right of point 1. Similar case happens in the upward direction for the Y axis.
+                </p>
+                <p>
+                    But what is this deal with the negative numbers on the plane? These numbers follow the same concept of unit distances from each other, these are just used to represent the directions opposite to the conventional axis direction. For instance, the negative numbers of the left of the X axis(see above) can be seen to be used to represent distances in a direction opposite to the conventional X axis direction(right), which is left. Similarly, negative numbers on the y axis point in the downward direction instead of up. This is basically the <em>"negative"</em> direction of the axis, and we will get to know their utility soon too.
+                </p>
+                <p>
+                    By the way, we are also going to learn about <em>"DIMENSIONS"</em> through this, which till now might have seemed to be some marvel sci-fi, tech related stuff, but trust me, it is as simple as addition is in arithmetic. But for that, you would have to wait a little.
+                </p>
+                <p>
+                    Now, you might ask, "well now I get it that this thing exists, but you have been telling about measuring distances. How to do that?". Well for that, take a moment to view the picture below and try to understand its meaning before moving to its explanation.
+                </p>
+                <canvas id="pointPlane" width="500" height="500" style="border: 1px solid #ccc; margin-top: 30px;"></canvas>
+
+            </div>
+        </div>
+                
+    </body>
+</html>
