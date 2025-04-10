@@ -169,3 +169,46 @@ const points = [
 ];
 
 plotPoints(pointctx, 500, 500, points);
+const linectx = document.getElementById('lineGraph').getContext('2d');
+
+function plotLine(ctx, width, height, equationFn, range = [-5, 5]) {
+    drawCoordinatePlane(ctx, width, height); // draw the coordinate plane
+    const centerX = width / 2;
+    const centerY = height / 2;
+    const step = 50;
+
+    ctx.strokeStyle = '#10b981'; // emerald green line
+    ctx.lineWidth = 2;
+
+    ctx.beginPath();
+    for (let x = range[0]; x <= range[1]; x += 0.1) {
+        const canvasX = centerX + x * step;
+        const y = equationFn(x);
+        const canvasY = centerY - y * step;
+
+        if (x === range[0]) {
+            ctx.moveTo(canvasX, canvasY);
+        } else {
+            ctx.lineTo(canvasX, canvasY);
+        }
+    }
+    ctx.stroke();
+
+    // Optionally mark a few points
+    ctx.fillStyle = '#10b981';
+    for (let x = range[0]; x <= range[1]; x++) {
+        const y = equationFn(x);
+        const canvasX = centerX + x * step;
+        const canvasY = centerY - y * step;
+
+        ctx.beginPath();
+        ctx.arc(canvasX, canvasY, 4, 0, Math.PI * 2);
+        ctx.fill();
+
+        ctx.font = '12px sans-serif';
+        ctx.fillText(`(${x}, ${y})`, canvasX + 25, canvasY - 10);
+    }
+}
+
+// Draw the graph for y = 2x + 3
+plotLine(linectx, 500, 500, x => 2 * x + 3);

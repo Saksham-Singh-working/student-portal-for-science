@@ -5,6 +5,11 @@
         <title>Motion explanation</title>
         <link rel="stylesheet" href="realchapter7.css" type="text/css">
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+        </script>
+
         <script src="realchapter7.js" defer></script>
     </head>
     <body>
@@ -96,7 +101,101 @@
                     Now, you might ask, "well now I get it that this thing exists, but you have been telling about measuring distances. How to do that?". Well for that, take a moment to view the picture below and try to understand its meaning before moving to its explanation.
                 </p>
                 <canvas id="pointPlane" width="500" height="500" style="border: 1px solid #ccc; margin-top: 30px;"></canvas>
-
+                <p>Notice the red dots? Those are what we call <em>the points on the coordinate plane</em>, which basically is a pair of two numbers, the first one being the distance of the point from the origin in the X-direction(to the right if positive and left if negative), and the second one being the distance of the point from the origin in the Y-direction(up if positive, down if negative).</p>
+                <p>
+                    For instance, take the point (2, 3) plotted above. If you notice carefully, it is 2 units to the right of the origin(in the X direction) and 3 units upwards(in the Y direction). Similarly, the point (-2, -3) is 2 units to the left and 3 units to the bottom of the origin. 
+                </p>
+                <p>
+                    Now you might ask, well then what is the need of all this? Well, let me give you something. Let us take an equation: <strong>y = 2x + 3.</strong> By substituting some values of x, we can easily get some values of y as follows: 
+                </p>
+                <table style="border-collapse: collapse; width: 60%; margin: 30px auto; font-family: 'Segoe UI', sans-serif; font-size: 16px; text-align: center; box-shadow: 0 0 15px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
+                    <thead style="background-color: #0ea5e9; color: white;">
+                      <tr>
+                        <th style="padding: 12px;">x</th>
+                        <th style="padding: 12px;">y = 2x + 3</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr style="background-color: #f0f9ff;">
+                        <td style="padding: 10px;">-3</td>
+                        <td style="padding: 10px;">-3</td>
+                      </tr>
+                      <tr>
+                        <td style="padding: 10px;">-2</td>
+                        <td style="padding: 10px;">-1</td>
+                      </tr>
+                      <tr style="background-color: #f0f9ff;">
+                        <td style="padding: 10px;">-1</td>
+                        <td style="padding: 10px;">1</td>
+                      </tr>
+                      <tr>
+                        <td style="padding: 10px;">0</td>
+                        <td style="padding: 10px;">3</td>
+                      </tr>
+                      <tr style="background-color: #f0f9ff;">
+                        <td style="padding: 10px;">1</td>
+                        <td style="padding: 10px;">5</td>
+                      </tr>
+                      <tr>
+                        <td style="padding: 10px;">2</td>
+                        <td style="padding: 10px;">7</td>
+                      </tr>
+                      <tr style="background-color: #f0f9ff;">
+                        <td style="padding: 10px;">3</td>
+                        <td style="padding: 10px;">9</td>
+                      </tr>
+                      <tr>
+                        <td style="padding: 10px;">4</td>
+                        <td style="padding: 10px;">11</td>
+                      </tr>
+                      <tr style="background-color: #f0f9ff;">
+                        <td style="padding: 10px;">5</td>
+                        <td style="padding: 10px;">13</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                <p>
+                    Now, what we can do is we can plot(or basically mark) these x and y values as corresponding points on this plane and connect them with a line through these points creating a straight line as follows: 
+                </p>                  
+                <canvas id="lineGraph" width="500" height="500" style="border: 1px solid #ccc; display: block; margin: 40px auto;"></canvas>
+                <p>
+                    How does this help me? Well now, I know how the equation looks like and instead of always putting in the x values to obtain the y values, i can take any point on this line and the corresponding y values can be recorded.
+                </p>
+                <p>
+                    Keep in mind: <strong>All the points on this line would follow the rules of the line(equation). So, all the points on the line would have their y = 2x + 3.</strong>
+                </p>
+                <p>
+                    Well now, let me fulfill my promise. Or wait, should I keep it for later. Maybe yes, I will maintain my promise to teach you about dimensions and make you marvel equipped, but some suspense is necessary.
+                </p>
+                <h2>Calm down warrior</h2>
+                <p>
+                    You have just learned a whole new set of information. You might even begin to blame me for adding this in, as you cannot see any theory related to this in your ncert books. However, as I told you earlier, this approach of learning about motion is going to be different than the conventional approach. Thus, it is highly recommended that if you still arent 100% confident about this theory, take a break, and read again. Watch some youtube tutorials if needed. But you must maintain the calm and learning mindset, otherwise it is going to be a mess.
+                </p>
+                <p>
+                    Remember: <strong>This theory is going to make each and every person grasp the ins and outs of motion, and if someone devotes the time required to learn all this, it is guaranteed that he/she would not lose a single mark on any tests or exams related to this chapter. This is for those who are struggling to understand, but also for those who want to become better at this. It is the bridge between good to great, and that is why it is tough.</strong>
+                </p>
+                <h2>Slope of a line</h2>
+                <p>
+                    Have you ever been to a hilly area for a vacation, or is it that you live in a hilly area. If yes, then you might have often heard of the word <em>slope</em>. Someone might have said that: "the hill has high slope, we should not be climbing this". But what is this slope, and why are we even learning geography in physics???
+                </p>
+                <p>
+                    Relax, it is not geography. You should be asking, why are we including math in geography? Yes, this term is related to and originates from mathematics. 
+                </p>
+                <p>
+                    Slope is the <em>inclination</em> of a line. It represents how tilted a line is. Let me elaborate.
+                </p>
+                <p>
+                    Let us take the previous line <strong>y = 2x + 3</strong> which we plotted earlier.
+                </p>
+                <p>
+                    We take any two points on this line. Let us say we take any random two from the table we had, say we take (1, 5) and (2, 7). Now the slope of this line is essentially the <em>ratio of the differnces of y coordinates and x coordinates.</em> Mathematically:
+                </p>
+                <p>
+                    <p>$$\text{Slope} = \frac{y_2 - y_1}{x_2 - x_1}$$</p>
+                </p>
+                <p>
+                    where y<sub>2</sub> and y<sub>1</sub> are the y coordinates of the two points chosen, and x<sub>2</sub> and x<sub>1</sub> are the x coordinates of the two points chosen.
+                </p>
             </div>
         </div>
                 
